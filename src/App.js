@@ -1,11 +1,11 @@
-import React , { useState } from 'react';
+import React  from 'react';
 import './App.css';
 import Menu from './components/SideBar';
 import Header from './components/Header';
 import Information from './components/Information';
 import Footer from './components/Footer'
-import Header2 from './components/Header2';
-import Carousel from 'react-bootstrap/Carousel'
+// import Header2 from './components/Header2';
+// import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
