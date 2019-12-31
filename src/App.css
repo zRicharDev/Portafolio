@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
+
+
+body{
+
+  margin: 0;
+  padding: 0px;
+  font-family: 'Chilanka', cursive;
+}
+
+#App {
+  font-family: sans-serif;
+
+  /* Give app full page to work with */
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* //Header */
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/dzxpqumj0/image/upload/v1565324686/business-2717063_1920.jpg"); */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images5.alphacoders.com/463/463438.jpg"); 
+  
+  height: 700px;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  margin-bottom: 0.35em;
+  padding: 0 20px;
+}
+
+
+.hero-text h2 {
+  font-size: 80px;
+  line-height: 82px;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 0.35em;
+  padding: 0 20px;
+}
+
+.hero-text h3 {
+  font-family: 'Raleway',Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-auto-rows: 200px;
+  /* grid-gap: 1rem; */
+  grid-auto-flow: row dense;
+  /* padding-top: 30px */
+  
+}
+
+@media all and (min-width: 320px) {
+  .grid-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .grid-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.grid-gallery__item:nth-child(11n+1) {
+  grid-column: span 3;
+  grid-row: span 3;
+  overflow: hidden;
+}
+
+.grid-gallery__item:nth-child(11n+2) {
+  grid-column: span 3;
+  grid-row: span 3;
+  overflow: hidden;
+}
+.grid-gallery__item:nth-child(11n+3) {
+  grid-column: span 3;
+  grid-row: span 3;
+  overflow: hidden;
+}
+
+.grid-gallery__item:nth-child(11n+4) {
+  grid-column: span 3;
+  grid-row: span 1;
+  /* overflow: hidden; */
+ 
+}
+.grid-gallery__item:nth-child(11n+5) {
+  grid-column: span 1;
+  grid-row: span 1;
+  overflow: hidden;
+}
+
+.grid-gallery__item:nth-child(11n+6) {
+  grid-column: span 2;
+  grid-row: span 2;
+  overflow: hidden;
+}
+
+/* .grid-gallery__item:nth-child(11n+7) {
+  grid-column: span 1;
+  grid-row: span 1;
+  overflow: hidden;
+}
+
+.grid-gallery__item:nth-child(11n+8) {
+  grid-column: span 2;
+  grid-row: span 2;
+  overflow: hidden;
+}
+
+.grid-gallery__item:nth-child(11n+9) {
+  grid-row: span 3;
+} */
+
+.grid-gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure{
+  margin: 0;
+  height: 100%;
+}
+
+
+.parent {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all .5s;
+}
+
+/* Several different images */
+.bg-1 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567899904/ux-788002_640.jpg);
+}
+.bg-2 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567900348/wordpress-923188_640.jpg);
+}
+.bg-3 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567900348/lean-startup-2230822_640.jpg);}
+
+.bg-4 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567900349/seo-758264_640.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.bg-5 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567900348/cms-265128_640.jpg);
+}
+.bg-6 {
+  background-image: url(https://res.cloudinary.com/dzxpqumj0/image/upload/v1567900604/ux-789162_640.jpg);
+}
+
+
+.grid-gallery__item a {
+  display: none;
+  color: #ffffff !important;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.parent:hover .child, .parent:focus .child {
+    transform: scale(1.2);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover a, .parent:focus a {
+    display: block;
+}
+
+.child:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(252,82,83,0.4);
+}
+footer
+.container-footer{
+  
+  display: flex;
+  justify-content:space-around;
+  padding: 2rem;
+  
+  align-items: center;
+
+}
+
+i{
+  font-size: 45px;
+  margin-right: 40px;
+  color: #ccc;
+ }
+i:hover {
+  color: #33384a;
+}
+
+span{
+  color: #ccc;
+}
